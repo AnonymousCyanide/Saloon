@@ -1,0 +1,27 @@
+
+	{% extends 'Base/base.html' %}
+	{% load static %}
+	{% block content %}
+	<div id="body">
+		<!-------Featured---->
+
+		<div id="featured">
+			<img src="{{featured.image.url}}" alt="">
+			<div>
+				<h2>{{featured.heading}}</h2>
+				{% for line in quote_lines%}
+				<span>{{line}}</span>
+				
+				{% endfor %}
+				<a href="blog-single-post.html" class="more">sign up</a>
+			</div>
+		</div>
+		<!-------End Featured---->
+		<ul>
+			{% for style in styles %}
+			{% include 'Base/style_hom_view.html' %}
+			{% endfor %}
+		</ul>
+	</div>
+	
+{% endblock %}

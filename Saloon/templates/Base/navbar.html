@@ -1,0 +1,23 @@
+{% load static %}
+<div id="header">
+    <a href="index.html" class="logo">
+        <img src="{% static 'images/logo.jpg'%}" alt="">
+    </a>
+    
+    <ul id="navigation">
+        
+        <li class="{{nav_class.home}}">
+            <a href="{%url 'home_page'%}">home</a>
+        </li>
+        <li class="{{nav_class.about}}">
+            <a href="{%url 'about_page'%}">about</a>
+        </li>
+        <li class="{{nav_class.gallery}}">
+            <a href="{%url 'gallery_page'%}">gallery</a>
+        </li>
+        
+        <li class="{{nav_class.contact}}">
+            <a href="{%url 'contact_page'%}">contact</a>
+        </li>
+    </ul>
+</div>

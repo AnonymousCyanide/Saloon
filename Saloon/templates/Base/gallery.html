@@ -1,0 +1,17 @@
+{% extends 'Base/base.html' %}
+	{% load static %}
+	{% block content %}
+	
+	<div id="body">
+		<h1><span>gallery</span></h1>
+		<ul class="gallery">
+			{% for style in styles %}
+			<li>
+				<a href="{% url 'style_page' id=style.id %}">
+					<img src="{{style.image.url}}" alt="">
+				</a>
+			</li>
+			{% endfor %}
+		</ul>
+	</div>
+{% endblock %}

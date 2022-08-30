@@ -1,0 +1,16 @@
+{% extends 'Base/base.html' %}
+	{% load static %}
+	{% block content %}
+	<div id="body">
+		<h1><span>gallery single post</span></h1>
+		<div>
+			<img src="{{style.image.url}}" alt="{{style.name}}">
+			<div class="article">
+				<h4>{{style.name}}</h4>
+				<p>
+					{{style.description}}
+				</p>
+			</div>
+		</div>
+	</div>
+	{% endblock %}
